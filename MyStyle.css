@@ -1,0 +1,17 @@
+.header{
+    background-color: white;
+    text-align: center;
+}
+
+.container{
+    background-color: powderblue;
+    height:200px;
+    display:flex;
+    flex-direction:row;
+  }
+
+.item{
+background-color: tomato;
+color:white;
+border:1px solid white;
+ }
