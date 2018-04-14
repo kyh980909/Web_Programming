@@ -25,13 +25,26 @@
             flex-direction: column;
         }
 
-        .item{
+        .trip{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        .people{
+            display: flex;
+            flex-direction: column;
+            justify-content: space;
+            width: 24.5%;  
+        }
+        
+        .box2{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            height: 1cm;
-            
+            justify-content: space-between;       
         }
+        
     </style>
 </head>
 <body>
@@ -42,36 +55,81 @@
         </h1>
     </div>
     <div class="container">
-        <div class="radio">
+        <div class="radio"> <!-- radio버튼 -->
             <h3>
                 <input type="radio" name="flight" value="round trip" checked>왕복
                 <input type="radio" name="flight" value="one way">편도
             </h3>
         </div>
 
-        <div class="item">
-            <label for="start">출발지</label>    
-                <input type="text" id="start" 
-                       placeholder="국가나 도시 이름을 입력해 주십시오.">
+        <div class="box2">
+            <div class="trip">
+                <legend><strong>출발지</strong></legend>
+                <input type="text" list="start" placeholder="국가를 입력해 주세요."
+                       style="height: 1cm">
                     <datalist id="start">
-                            <option value="한국"></option>
-                            <option value="일본"></option>
-                            <option value="미국"></option>
-                            <option value="프랑스"></option>
-                            <option value="영국"></option>
+                        <option value="한국"></option>
+                        <option value="미국"></option>
+                        <option value="일본"></option>
+                        <option value="중국"></option>
+                        <option value="영국"></option>
+                        <option value="프랑스"></option>
+                        <option value="스페인"></option>
                     </datalist>
+            </div>
 
-            <label for="end">도착지</label>    
-                <input type="text" id="end" 
-                       placeholder="국가나 도시 이름을 입력해 주십시오.">
-                    <datalist id="end">
+            <div class="trip">
+                    <legend><strong>도착지</strong></legend>
+                    <input type="text" list="end" placeholder="국가를 입력해 주세요."
+                           style="height: 1cm">
+                        <datalist id="end">
                             <option value="한국"></option>
-                            <option value="일본"></option>
                             <option value="미국"></option>
-                            <option value="프랑스"></option>
+                            <option value="일본"></option>
+                            <option value="중국"></option>
                             <option value="영국"></option>
-                    </datalist>
+                            <option value="프랑스"></option>
+                            <option value="스페인"></option>
+                        </datalist>
+            </div>
+
+            <div class="trip">
+                <legend><strong>가는날</strong></legend>
+                <input type="date" style="height: 1cm">
+            </div>
+
+            <div class="trip">
+                <legend><strong>오는날</strong></legend>
+                <input type="date" style="height: 1cm">
+            </div>
         </div>
+        <br><br>
+        <div class="box2">
+            <div class="people">
+                <legend><strong>성인</strong></legend>
+                <input type="number" min="0" max="9" step="1" value="0"
+                       style="text-align: center; height: 0.7cm">
+            </div>
+            <div class="people">
+                <legend><strong>소아(만2-11세)</strong></legend>
+                <input type="number" min="0" max="9" step="1" value="0"
+                       style="text-align: center; height: 0.7cm">
+            </div>
+            <div class="people">
+                    <legend><strong>유아(만2세미만)</strong></legend>
+                    <input type="number" min="0" max="9" step="1" value="0"
+                           style="text-align: center; height: 0.7cm">
+            </div>
+                <div class="people">
+                    <legend><strong>좌석 등급</strong></legend>
+                    <select style="height: 0.7cm">
+                        <option>일반석</option>
+                        <option>프레스티지석</option>
+                        <option>일등석</option>
+                    </select>
+                </div>
+        </div>
+        
     </div>
 </body>
 </html>
