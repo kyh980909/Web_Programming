@@ -44,6 +44,11 @@
             flex-direction: row;
             justify-content: space-between;       
         }
+
+        .button{
+            display: flex;
+            justify-content: space-around;
+        }
         
     </style>
 </head>
@@ -63,6 +68,7 @@
         </div>
 
         <div class="box2">
+            &nbsp;
             <div class="trip">
                 <legend><strong>출발지</strong></legend>
                 <input type="text" list="start" placeholder="국가를 입력해 주세요."
@@ -75,6 +81,7 @@
                         <option value="영국"></option>
                         <option value="프랑스"></option>
                         <option value="스페인"></option>
+                        <option value="태국"></option>
                     </datalist>
             </div>
 
@@ -90,6 +97,7 @@
                             <option value="영국"></option>
                             <option value="프랑스"></option>
                             <option value="스페인"></option>
+                            <option value="태국"></option>
                         </datalist>
             </div>
 
@@ -102,9 +110,11 @@
                 <legend><strong>오는날</strong></legend>
                 <input type="date" style="height: 1cm">
             </div>
+            &nbsp;
         </div>
-        <br><br>
+        <br><br><br><br><br><br><br>
         <div class="box2">
+            &nbsp;
             <div class="people">
                 <legend><strong>성인</strong></legend>
                 <input type="number" min="0" max="9" step="1" value="0"
@@ -128,8 +138,14 @@
                         <option>일등석</option>
                     </select>
                 </div>
+            &nbsp;
         </div>
-        
+        <br><br><br>
+        <div class="button">
+            <a href="회원정보.html" target="_self">
+                <input type="image" src="right-arrow.png" width="70px">
+            </a>
+        </div>
     </div>
 </body>
 </html>
